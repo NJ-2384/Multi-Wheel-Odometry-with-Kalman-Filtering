@@ -13,13 +13,13 @@ Design and implement a software system for real-time odometry estimation for a 4
 - Handles 4-wheel differential kinematics
 
 ## 🔹 KalmanFilter.py
-- Implements the Extended Kalman Filter (EKF) for:
+- Implements the Kalman Filter for:
   - Pose: x, y, θ
   - Velocities: linear v, angular ω
 - Fuses kinematic data with uncertainty modeling
 
 ## 🔹 OdometryEstimation.py
-- Integrates kinematic outputs using the EKF
+- Integrates kinematic outputs using the Kalman Filter
 - Produces filtered:
   - Position estimates
   - Orientation
@@ -31,15 +31,21 @@ Design and implement a software system for real-time odometry estimation for a 4
 - Stores filtered estimates to Estimated_Values.csv
 - Shows real-time plots via matplotlib
 
+
+## Algorithm Flow
+
+Raw Encoders → Main → Kinematics → OdometryEstimation → KalmanFilter → Estimated Output → Main
+
+
 ## ⚙️ Features
 
-### ✔️ Multi-process sensor pipeline
-Uses Python’s multiprocessing module to simulate or stream encoder readings.
+### ✔️ Multi-process and Queue
+Uses Python’s multiprocessing module and Queue Datastructure to handle Asynchronous encoder ingestion and Safe concurrent data handling
 
 ### ✔️ Kinematics-based forward model
-Raw encoder counts → displacement → velocity → motion.
+Raw encoder counts → displacement → velocity.
 
-### ✔️ Extended Kalman Filter
+### ✔️ Kalman Filter
 Noise modeling and state estimation for higher accuracy.
 
 ### ✔️ Real-time Visualization
@@ -47,7 +53,3 @@ Displays robot trajectory and velocities live.
 
 ### ✔️ Automatic Logging
 All estimates saved into Estimated_Values.csv.
-
-## ▶️ How to Run
-
-### 1. Install dependencies
