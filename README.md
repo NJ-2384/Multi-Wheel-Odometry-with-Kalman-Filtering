@@ -1,5 +1,6 @@
 # Multi-Wheel-Odometry-with-Kalman-Filtering
 
+
 ## Problem Statement:
 
 Design and implement a software system for real-time odometry estimation for a 4-wheel differential drive robot.
@@ -8,6 +9,7 @@ Design and implement a software system for real-time odometry estimation for a 4
 
 Raw Encoders (Encoder_data folder) → Main → Kinematics → OdometryEstimation → KalmanFilter → Estimated Output → Main
 
+
 ## 🔹 Kinematics.py
 - Converts raw encoder counts into:
   - Wheel displacements
@@ -15,11 +17,13 @@ Raw Encoders (Encoder_data folder) → Main → Kinematics → OdometryEstimatio
   - Robot linear and angular velocity estimates
 - Handles 4-wheel differential kinematics
 
+
 ## 🔹 KalmanFilter.py
 - Implements the Kalman Filter for:
   - Pose: x, y, θ
   - Velocities: linear v, angular ω
 - Fuses kinematic data with uncertainty modeling
+
 
 ## 🔹 OdometryEstimation.py
 - Integrates kinematic outputs using the Kalman Filter
@@ -33,6 +37,7 @@ Raw Encoders (Encoder_data folder) → Main → Kinematics → OdometryEstimatio
 - Spawns multiprocessing encoder processes
 - Stores filtered estimates to Estimated_Values.csv
 - Shows real-time plots via matplotlib
+
 
 ## ⚙️ Features
 
