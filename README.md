@@ -4,6 +4,9 @@
 
 Design and implement a software system for real-time odometry estimation for a 4-wheel differential drive robot.
 
+## Algorithm Flow
+
+Raw Encoders (Encoder_data folder) → Main → Kinematics → OdometryEstimation → KalmanFilter → Estimated Output → Main
 
 ## 🔹 Kinematics.py
 - Converts raw encoder counts into:
@@ -30,12 +33,6 @@ Design and implement a software system for real-time odometry estimation for a 4
 - Spawns multiprocessing encoder processes
 - Stores filtered estimates to Estimated_Values.csv
 - Shows real-time plots via matplotlib
-
-
-## Algorithm Flow
-
-Raw Encoders → Main → Kinematics → OdometryEstimation → KalmanFilter → Estimated Output → Main
-
 
 ## ⚙️ Features
 
