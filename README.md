@@ -39,6 +39,9 @@ Raw Encoders (Encoder_data folder) → Main → Kinematics → OdometryEstimatio
 - Shows real-time plots via matplotlib
 
 
+<img width="1920" height="1032" alt="Graph" src="https://github.com/user-attachments/assets/a01c9bdf-392d-4738-85c2-3793c1b496fc" />
+
+
 ## ⚙️ Features
 
 ### ✔️ Multi-process and Queue
